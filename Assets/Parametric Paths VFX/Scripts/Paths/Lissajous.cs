@@ -28,7 +28,7 @@ public class Lissajous : BasePathModule
     }
 
     
-    public override void CalcTransforms(float t, ref Quaternion rot, ref Vector3 pos)
+    public override void CalcTransforms(ref float t, ref Quaternion rot, ref Vector3 pos)
     {
         var newPos = CalcLissajous(t);
         newPos = rot * newPos;

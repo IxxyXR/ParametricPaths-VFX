@@ -2,5 +2,7 @@
 
 public abstract class BasePathModule : MonoBehaviour
 {
-    public abstract void CalcTransforms(float t, ref Quaternion rot, ref Vector3 pos);
+
+    public bool active = true;
+    public abstract void CalcTransforms(ref float t, ref Quaternion rot, ref Vector3 pos);
 }

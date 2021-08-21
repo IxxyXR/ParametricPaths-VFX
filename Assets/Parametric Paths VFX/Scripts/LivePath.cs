@@ -25,18 +25,22 @@ public class LivePath : MonoBehaviour
     void Update()
     {
         _time += Rate;
+        float time = _time;
         BasePathModule previousPathModule = null;
         foreach (var component in Path.GetComponents<MonoBehaviour>())
         {
-            if (component.GetType().IsSubclassOf(typeof(BasePathModule)))
+            if (component is BasePathModule)
             {
-                previousPathModule = (BasePathModule)component;
+                previousPathModule = component as BasePathModule;
             }
             if (component.GetType().IsSubclassOf(typeof(BaseAnimator)) && previousPathModule!=null)
             {
-                var animator = (BaseAnimator)component;
-                animator.PathModule = previousPathModule;
-                animator.DoAnimation(_time);
+                var animator = component as BaseAnimator;
+                if (animator!=null && animator.active)
+                {
+                    animator.PathModule = previousPathModule;
+                    animator.DoAnimation(time);
+                }
             }
         }
         
@@ -44,14 +48,16 @@ public class LivePath : MonoBehaviour
         var rot = Quaternion.identity;
         foreach (var module in Path.GetComponents<BasePathModule>())
         {
-            module.CalcTransforms(_time, ref rot, ref pos);
+            if (module.active)
+            {
+                module.CalcTransforms(ref time, ref rot, ref pos);
+            }
         }
-        transform.position = _initialPosition + (pos * Scale);
-        transform.rotation = rot;
+        transform.localPosition = _initialPosition + (pos * Scale);
+        transform.localRotation = rot;
 
         if (vfx != null)
         {
-            // vfx.Play();
             vfx.SendEvent("Spawn");
         }
     }

@@ -19,7 +19,7 @@ public class Polygon2 : BasePathModule
         );
 
     }
-    public override void CalcTransforms(float t, ref Quaternion rot, ref Vector3 pos)
+    public override void CalcTransforms(ref float t, ref Quaternion rot, ref Vector3 pos)
     {
         t *= turns;
         Quaternion rotation = rot * Quaternion.LookRotation(Vector3.forward, axis);

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class BaseAnimator : MonoBehaviour
 {
+    public bool active = true;
     public string FieldName;
     public float frequency = .1f;
     public float phase;

@@ -293,10 +293,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.62
+    m_Value: 0.45
   intensity:
     m_OverrideState: 1
-    m_Value: 0.74
+    m_Value: 1
   scatter:
     m_OverrideState: 1
     m_Value: 0.746
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   quality:
     m_OverrideState: 0
     m_Value: 1

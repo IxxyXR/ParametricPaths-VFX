@@ -12,7 +12,7 @@ public class Line : BasePathModule
         return (1 / P) * (P - Mathf.Abs(t % (2 * P) - P));
     }
     
-    public override void CalcTransforms(float t, ref Quaternion rot, ref Vector3 pos)
+    public override void CalcTransforms(ref float t, ref Quaternion rot, ref Vector3 pos)
     {
         float easedTime = EasingFunction.GetEasingFunction(easing).Invoke(0, 1, PingPong(t * repeats));
         var offset = Vector3.Lerp(Vector3.zero, distance, easedTime);

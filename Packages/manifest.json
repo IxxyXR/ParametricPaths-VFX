@@ -10,6 +10,7 @@
   ],
   "dependencies": {
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+    "com.ixxy.unitysymmetry": "https://github.com/IxxyXR/unity-symmetry.git#upm",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.ide.rider": "3.0.7",
@@ -22,6 +23,8 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.vectorgraphics": "2.0.0-preview.17",
     "com.unity.visualeffectgraph": "12.0.0",
+    "com.unity.xr.management": "4.0.7",
+    "com.unity.xr.oculus": "1.10.0",
     "jp.keijiro.klak.motion": "1.0.2",
     "jp.keijiro.neolowman": "https://github.com/keijiro/NeoLowMan.git#upm",
     "com.unity.modules.ai": "1.0.0",

@@ -11,7 +11,7 @@ public class Supershape : BasePathModule
     public float n3 = 1f;
     public float radius = .02f;
     
-    public override void CalcTransforms(float t, ref Quaternion rot, ref Vector3 pos)
+    public override void CalcTransforms(ref float t, ref Quaternion rot, ref Vector3 pos)
     {
         var rotatedAxis = rot * axis;
         float angle = t * 360f * turns;

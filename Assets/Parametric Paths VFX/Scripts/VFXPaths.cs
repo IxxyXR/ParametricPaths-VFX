@@ -52,12 +52,35 @@ public class VFXPaths : MonoBehaviour
         Vector3 point = Vector3.negativeInfinity;
         for (int i=0; i<pointsPerFrame; i++)
         {
+            
             _time += Rate;
+            float time = _time;
+            BasePathModule previousPathModule = null;
+            foreach (var component in Path.GetComponents<MonoBehaviour>())
+            {
+                if (component is BasePathModule)
+                {
+                    previousPathModule = component as BasePathModule;
+                }
+                else if (component.GetType().IsSubclassOf(typeof(BaseAnimator)) && previousPathModule!=null)
+                {
+                    var animator = component as BaseAnimator;
+                    if (animator != null && animator.active)
+                    {
+                        animator.PathModule = previousPathModule;
+                        animator.DoAnimation(time);
+                    }
+                }
+            }
+            
             var pos = Vector3.zero;
             var rot = Quaternion.identity;
             foreach (var module in Path.GetComponents<BasePathModule>())
             {
-                module.CalcTransforms(_time, ref rot, ref pos);
+                if (module.active)
+                {
+                    module.CalcTransforms(ref time, ref rot, ref pos);
+                }
             }
             point = _initialPosition + (pos * Scale);
 

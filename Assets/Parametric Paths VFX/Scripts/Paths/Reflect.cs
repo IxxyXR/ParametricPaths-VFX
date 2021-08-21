@@ -7,7 +7,7 @@ public class Reflect : BasePathModule
     public bool z;
     public float interval = 1f;
     
-    public override void CalcTransforms(float t, ref Quaternion rot, ref Vector3 pos)
+    public override void CalcTransforms(ref float t, ref Quaternion rot, ref Vector3 pos)
     {
         if (t % interval > 0.5f)
         {
