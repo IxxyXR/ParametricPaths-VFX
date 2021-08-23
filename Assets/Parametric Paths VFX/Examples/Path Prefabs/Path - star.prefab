@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7895443922493823802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7895443922493823797}
+  - component: {fileID: 7895443922493823796}
+  - component: {fileID: 7895443922493823798}
+  - component: {fileID: 7895443922493823803}
+  - component: {fileID: 7895443922493823799}
+  m_Layer: 0
+  m_Name: Path - star
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7895443922493823797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895443922493823802}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.34129015, y: -1.6438326, z: -0.1473974}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7895443922493823796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895443922493823802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e5fe8470371604c88abfb29ef30eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  turns: 1
+  axis: {x: 0, y: 1, z: 0}
+  radius: 2
+  sides: 5
+  easing: 21
+--- !u!114 &7895443922493823798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895443922493823802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51086accc2014d69ac6c63a0716937bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  FieldName: axis
+  frequency: 0.1
+  phase: 0
+  Range: {x: 0, y: 1}
+  easing: 21
+  Axis: 0
+--- !u!114 &7895443922493823803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895443922493823802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e5fe8470371604c88abfb29ef30eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  turns: 1
+  axis: {x: 0, y: 1, z: 0}
+  radius: -1.5
+  sides: 10
+  easing: 21
+--- !u!114 &7895443922493823799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895443922493823802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01f7df7448456a4db10355fb2424da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  FieldName: radius
+  frequency: 0.1
+  phase: 0
+  Range: {x: -2, y: -1}
+  easing: 21

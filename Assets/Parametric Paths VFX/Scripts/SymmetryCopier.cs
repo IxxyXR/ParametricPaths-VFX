@@ -110,18 +110,23 @@ public class SymmetryCopier : MonoBehaviour
             var transformBefore = Matrix4x4.TRS(Position, Quaternion.Euler(Rotation), Scale);
             var cumulativeTransform = Matrix4x4.TRS(PositionEach, Quaternion.Euler(RotationEach), ScaleEach);
             var currentCumulativeTransform = cumulativeTransform;
-            foreach (var m in sym.matrices)
+            for (var i = 0; i < sym.matrices.Count; i++)
             {
+                var m = sym.matrices[i];
                 var empty = new GameObject();
                 empty.transform.parent = transform;
                 var vfxCopy = Instantiate(vfx, empty.transform);
                 vfxCopy.gameObject.SetActive(true);
-                var matrix = (ApplyAfter ? currentCumulativeTransform * m : m * currentCumulativeTransform) * transformBefore;
+                vfxCopy.GetComponent<VisualEffect>().SetInt("InstanceCount", sym.matrices.Count);
+                vfxCopy.GetComponent<VisualEffect>().SetInt("InstanceID", i);
+                var matrix = (ApplyAfter ? currentCumulativeTransform * m : m * currentCumulativeTransform) *
+                             transformBefore;
                 empty.transform.localScale = ExtractScale(matrix);
                 empty.transform.rotation = ExtractRotation(matrix);
                 empty.transform.position = ExtractPosition(matrix);
                 currentCumulativeTransform *= cumulativeTransform;
             }
+
             numClones = sym.matrices.Count;
         }
     }

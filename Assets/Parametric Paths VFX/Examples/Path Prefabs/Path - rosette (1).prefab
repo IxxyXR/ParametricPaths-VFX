@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &585117952608380726
+--- !u!1 &2799689470890382201
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 585117952608380725}
-  - component: {fileID: 585117952608380724}
-  - component: {fileID: 585117952608380727}
+  - component: {fileID: 2799689470890382204}
+  - component: {fileID: 2799689470890382205}
   m_Layer: 0
-  m_Name: Path - rosette
+  m_Name: Path - rosette (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &585117952608380725
+--- !u!4 &2799689470890382204
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585117952608380726}
+  m_GameObject: {fileID: 2799689470890382201}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.34129015, y: -1.6438326, z: -0.1473974}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,39 +32,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &585117952608380724
+--- !u!114 &2799689470890382205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585117952608380726}
+  m_GameObject: {fileID: 2799689470890382201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e5fe8470371604c88abfb29ef30eb3, type: 3}
+  m_Script: {fileID: 11500000, guid: e1c5d0f35d0eb9b47bec653ca9476984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   turns: 1
   axis: {x: 0, y: 1, z: 0}
-  radius: 3.2
-  sides: 5
+  radius: 2
+  sides: 4
   easing: 21
---- !u!114 &585117952608380727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585117952608380726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e5fe8470371604c88abfb29ef30eb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  turns: 1
-  axis: {x: 0, y: 1, z: 0}
-  radius: -2.4
-  sides: 10
-  easing: 20

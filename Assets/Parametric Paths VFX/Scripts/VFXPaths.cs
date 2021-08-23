@@ -17,6 +17,7 @@ public class VFXPaths : BasePathConsumer
     
     void Start()
     {
+        _time = 0;
         _vfx = gameObject.GetComponent<VisualEffect>();
     }
 
